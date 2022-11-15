@@ -1,5 +1,3 @@
-// Algoritmo
-
 class Adaline {
   weight = [0, 0];
 
@@ -23,7 +21,7 @@ class Adaline {
   }
 
   f(arg: number) {
-    return Math.tanh(arg * this.ganho);
+    return Math.tan(arg * this.ganho);
   }
 
   propaga(index: number) {
@@ -90,21 +88,21 @@ const XOR = [-1, -1, 1, 1];
 
 const adaline = new Adaline();
 
-adaline.criaTreinamento(OR);
+adaline.criaTreinamento(AND);
 adaline.treinamento(1500);
-adaline.apresentaResultado();
+// adaline.apresentaResultado();
 
-// console.log("P3\n301 301\n255");
-// for (let x1 = -1.5; x1 < 1.5; x1 += 0.01) {
-//   for (let x2 = -1.5; x2 < 1.5; x2 += 0.01) {
-//     if (
-//       Math.abs(Math.abs(x1) - 1.0) < 0.2 &&
-//       Math.abs(Math.abs(x2) - 1.0) < 0.2
-//     ) {
-//       console.log("255 0 0 ");
-//     } else if (adaline.propaga2(x1, x2) < 0) {
-//       console.log("255 255 0 ");
-//     } else console.log("0 255 255 ");
-//   }
-//   console.log("\n");
-// }
+console.log("P3\n300 300\n255");
+for (let x1 = -1.5; x1 < 1.5; x1 += 0.01) {
+  for (let x2 = -1.5; x2 < 1.5; x2 += 0.01) {
+    if (
+      Math.abs(Math.abs(x1) - 1.0) < 0.2 &&
+      Math.abs(Math.abs(x2) - 1.0) < 0.2
+    ) {
+      console.log("255 0 0 ");
+    } else if (adaline.propaga2(x1, x2) < 0) {
+      console.log("255 255 0 ");
+    } else console.log("0 255 255 ");
+  }
+  console.log("\n");
+}

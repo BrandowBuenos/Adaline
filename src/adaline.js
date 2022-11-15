@@ -74,7 +74,7 @@ var AND = [-1, 1, -1, -1];
 var OR = [-1, 1, 1, 1];
 var XOR = [-1, -1, 1, 1];
 var adaline = new Adaline();
-adaline.criaTreinamento(OR);
+adaline.criaTreinamento(AND);
 adaline.treinamento(1500);
 // adaline.apresentaResultado();
 console.log("P3\n300 300\n255");
